@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -11,18 +13,22 @@
   font: inherit;
   color: inherit;
   outline: none;
+  font-size: 1.05rem;
+  font-family: "Google Sans", sans-serif;
 }
 
+main {
+  margin-bottom: 8rem;
+}
 .container {
   position: relative;
   padding: 0 10rem;
-  height: 100px;
   width: 100%;
 }
 
 .title {
   font-weight: 600;
-  color: blue;
+  color: rgb(3, 3, 158);
   justify-content: center;
   display: flex;
 }
@@ -34,6 +40,19 @@ h1 {
 h2.title {
   font-size: 2rem;
   color: rgb(70, 17, 17);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2.title::after {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 5px;
+  background-color: rgba(0, 0, 255, 0.507);
+  border-radius: 10px;
+  top: 40px;
+  bottom: 0;
 }
 
 .services_list {
@@ -48,11 +67,11 @@ h2.title {
   padding: 10px;
 }
 .service {
-  display: block;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   background-color: rgb(242, 242, 249);
+  transition: 0.3s;
 }
 
 .service:hover {
@@ -61,11 +80,57 @@ h2.title {
 }
 
 h3.title {
+  font-weight: 600;
   font-size: 1.2rem;
-  color: blueviolet;
+  color: rgb(2, 2, 148);
   margin-bottom: 10px;
+  position: relative;
 }
 
 p.description {
   color: grey;
+  text-align: start;
+  margin-bottom: 20px;
 }
+
+/* footer*/
+.footer {
+  background-color: #010168;
+  width: 100%;
+  padding: 2rem 0;
+  color: whitesmoke;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer-grid-section h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.footer-grid-section a {
+  transition: 0.3s;
+}
+.footer-grid-section a:hover {
+  color: rgb(168, 168, 241);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials-icons {
+  margin: 0 0.2rem;
+}
+/* End footer*/
