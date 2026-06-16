@@ -6,7 +6,8 @@ body {
   line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-div {
+/* .statements .achievement .values */
+.about,.statements, .achievement, .values {
   background-color: rgb(216, 216, 243);
   border-radius: 8px;
   margin: 20px auto;
@@ -15,6 +16,47 @@ div {
   padding: 24px;
   transition: box-shadow 0.3s ease;
 }
-div:hover{
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    }
+div:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+/* footer*/
+.footer {
+  background-color: #010168;
+  width: 100%;
+  padding: 2rem 0;
+  color: whitesmoke;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer-grid-section h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.footer-grid-section a {
+  transition: 0.3s;
+}
+.footer-grid-section a:hover {
+  color: rgb(168, 168, 241);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials-icons {
+  margin: 0 0.2rem;
+}
+/* End footer*/
