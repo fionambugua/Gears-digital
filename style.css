@@ -12,6 +12,8 @@
 
 
 
+
+
 /*General styles*/
 
 *{
@@ -35,6 +37,10 @@ ul{
 
 img{
     width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
 } 
 
 .container{
@@ -46,16 +52,7 @@ img{
     
     
 }
-/*
 
-.grid-2{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    justify-content: center;
-}
-
-*/
 
 
 .text{
@@ -64,13 +61,6 @@ img{
     line-height: 1.8;
 }
 
-.column-1{
-    margin-right: 1.5rem;
-}
-
-.column-2{
-    margin-left: 1.5rem;
-}
 
 .img{
     display: flex;
@@ -84,14 +74,16 @@ img{
 
 header{
     width: 100%;;
-    background-color: var(--light-one);
+    background-color:transparent;
     overflow: hidden;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 nav{
     width: 100%;
-    position: relative;
+    position: absolute;
     z-index: 50;
 }
 
@@ -106,7 +98,7 @@ nav .container{
     width: 80px;
     display: flex;
     align-items: center;
-    background-color: var(--light-one);
+    background-color:transparent;
 }
 
 .links ul{
@@ -116,7 +108,7 @@ nav .container{
 .links a{
     display: inline-block;
     padding: 0.9rem 1.2rem;
-    color: var(--dark-one);
+    color: var(--light-one);
     font-size: 1.05rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -142,15 +134,10 @@ nav .container{
     
 }
 
-.header-content .container.grid-2{
-    grid-template-columns: 2.5fr 3.5fr;
-    min-height: calc(100vh - 6rem);
-    padding-bottom: 2.5rem;
-    text-align: left;
+.header-content{
+    margin: 0;
+    padding: 0;
 }
-
-
-
 
 .header-title{
     font-size: 3.8  rem;
@@ -185,43 +172,41 @@ nav .container{
     max-width: 750px;
 }
 
- .overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
- }
-
 
  /* Full screen hero */
 .hero {
-  position: relative;
+  position: relative;  
   height: 100vh;
-  width: 100%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Background video */
 .bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+  position:absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /*transform: translate(-50%, -50%); */
   object-fit: cover;
-  z-index: 0;
-  object-fit: cover;
+  z-index: -1;
+  opacity: 0.75;
 }
 
 /* Dark overlay  */
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
 
 
 /* Text content */
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   color: white;
   text-align: center;
   top: 50%;
